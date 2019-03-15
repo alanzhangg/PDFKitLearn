@@ -14,6 +14,7 @@
 		D0CF13E82237EBD200DB689F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CF13E62237EBD200DB689F /* LaunchScreen.storyboard */; };
 		D0CF13F12237EBEC00DB689F /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CF13F02237EBEC00DB689F /* PDFKit.framework */; };
 		D0CF13F32237EC7F00DB689F /* MyForm.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D0CF13F22237EC7F00DB689F /* MyForm.pdf */; };
+		D0CF13F52238EE6C00DB689F /* WatermarkPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF13F42238EE6C00DB689F /* WatermarkPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D0CF13E92237EBD200DB689F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0CF13F02237EBEC00DB689F /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		D0CF13F22237EC7F00DB689F /* MyForm.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MyForm.pdf; sourceTree = "<group>"; };
+		D0CF13F42238EE6C00DB689F /* WatermarkPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermarkPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				D0CF13DD2237EBD000DB689F /* AppDelegate.swift */,
 				D0CF13DF2237EBD000DB689F /* ViewController.swift */,
+				D0CF13F42238EE6C00DB689F /* WatermarkPage.swift */,
 				D0CF13F22237EC7F00DB689F /* MyForm.pdf */,
 				D0CF13E12237EBD000DB689F /* Main.storyboard */,
 				D0CF13E42237EBD200DB689F /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			files = (
 				D0CF13E02237EBD000DB689F /* ViewController.swift in Sources */,
 				D0CF13DE2237EBD000DB689F /* AppDelegate.swift in Sources */,
+				D0CF13F52238EE6C00DB689F /* WatermarkPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 import PDFKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PDFDocumentDelegate {
 
   @IBOutlet var PdfView: PDFView!
   
@@ -115,20 +115,25 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     if let documentURL = Bundle.main.url(forResource: "MyForm", withExtension: "pdf"),
-      let document = PDFDocument(url: documentURL),
-      let page = document.page(at: 0) {
+      let document = PDFDocument(url: documentURL){
+      document.delegate = self
       PdfView.document = document
       PdfView.autoScales = true
       PdfView.backgroundColor = UIColor.lightGray
-      insertFormFieldsInto(page)
-      insertRadioButtonInto(page)
-      insertCheckboxInto(page)
-      insertResetButtonInto(page)
-      insertMultilineTextBoxInto(page)
-      insertSignatureInto(page)
+      if let page = document.page(at: 0){
+        insertFormFieldsInto(page)
+        insertRadioButtonInto(page)
+        insertCheckboxInto(page)
+        insertResetButtonInto(page)
+        insertMultilineTextBoxInto(page)
+        insertSignatureInto(page)
+      }
     }
   }
 
+  func classForPage() -> AnyClass {
+    return WatermarkPage.self
+  }
 
 }
 
